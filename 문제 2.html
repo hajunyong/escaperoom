@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>문제 1</title>
+<title>문제 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="문제 1_files/libs/clipboard/clipboard.min.js"></script>
-<script src="문제 1_files/libs/quarto-html/quarto.js"></script>
-<script src="문제 1_files/libs/quarto-html/popper.min.js"></script>
-<script src="문제 1_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="문제 1_files/libs/quarto-html/anchor.min.js"></script>
-<link href="문제 1_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="문제 1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="문제 1_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="문제 1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="문제 1_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="문제 2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="문제 2_files/libs/quarto-html/quarto.js"></script>
+<script src="문제 2_files/libs/quarto-html/popper.min.js"></script>
+<script src="문제 2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="문제 2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="문제 2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="문제 2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="문제 2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="문제 2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="문제 2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">문제 1</h1>
+<h1 class="title">문제 2</h1>
 </div>
 
 
@@ -62,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+&lt;!DOCTYPE html&gt;
 
 
 <meta charset="UTF-8">
@@ -71,44 +72,29 @@ Stage 1
 
 
 <h1>
-문제 1
+문제 2
 </h1>
 <p>
-Q. 여섯 개의 상자가 있다. 하나의 상자에만 알약이 들어 있다. 각 상자에는 다음 문장이 적혀 있다. 단, 정확히 두 개의 문장만이 참이다.
-</p>
-<ul>
-<li>
-상자 A: 약은 상자 B에 없다.
-</li>
-<li>
-상자 B: 약은 상자 C에 있다.
-</li>
-<li>
-상자 C: 상자 A의 문장은 참이다.
-</li>
-<li>
-상자 D: 약은 상자 E에 있다.
-</li>
-<li>
-상자 E: 약은 상자 F에 없다.
-</li>
-<li>
-상자 F: 약은 상자 A에 있다.
-</li>
-</ul>
-<p>
-❓ 문제: 어느 상자에 약이 있을까요?
-</p>
-<input type="text" id="answer" placeholder="정답 입력"> <button onclick="checkAnswer()">제출</button>
+</p><p>Q. “약물의 반응 분석”<br> 당신은 세 명의 환자에게 세 가지 약물을 처방해야 합니다. 각 약물은 다른 효과 시간과 반응 패턴을 보입니다.<br><br></p>
+<p>약물 설명:<br> 약물 A: 3시간 이내에 빠르게 반응하며, 1시간 뒤에는 효과가 사라집니다.<br> 약물 B: 30분 이내에 효과가 나타나는 빠른 반응을 보이는 약물입니다.<br> 약물 C: 6시간 이후에 서서히 효과가 나타나며, 24시간 이상 지속됩니다.<br><br></p>
+<p>환자 상태:<br> 환자 1: 약을 복용한 후, 2시간 동안 증상이 완화된 뒤, 다시 증상이 악화되었습니다.<br> 환자 2: 약을 복용한 후, 6시간이 지나도 아무런 변화가 없었고, 그 후 증상이 급격히 개선되었습니다.<br> 환자 3: 약을 복용한 후, 빠르게 증상이 개선되었고, 1시간 후에는 증상이 전혀 사라졌습니다.<br><br></p>
+❓ 문제: 각 환자들에게 맞는 약은 무엇인가요? (순서대로 입력해주세요 ex. ACB)
+<p></p>
+<input type="text" id="answer" placeholder="정답 입력 (예: ACB)"> <button onclick="checkAnswer()">제출</button>
 <p id="result">
 </p>
 <script>
     function checkAnswer() {
-      const answer = document.getElementById("answer").value.toLowerCase();
+      const answer = document.getElementById("answer").value.toUpperCase();
       const resultText = document.getElementById("result");
 
-      if (answer === "f") {
-        resultText.innerHTML = "정답이다. <br> 3월 일 (납치일기 문제 2) <br> 겨우 첫번째 문제를 풀었다. 이런 문제를 2개나 더 풀어야 한다니.. 문제를 남기는 과정에서 격리소를 지키는 인원들에게 들킬 뻔했다. 어쩔 수 없다.. 이번에 문제를 받게 된다면 잠깐 내보내주는 야외활동시간에 야외에 숨겨야겠다.. 이것도 들킬 것을 염두에 두고 곳곳에 숨겨두어야겠다...";
+      if (answer === "ACB") {
+        resultText.innerText = "정답이다. 4월 일\n\n" +
+          "마지막 문제만이 남았다... 문제를 풀다가 슬쩍 보고 알아낸 것이 있다. 이 모든 것은 물리학과를 멸망시키기 위한 어떤 집단의 계략이라는 것이다..! " +
+          "하지만 알아낸 것과 상관없이 문제를 다 풀어야지 여기서 탈출할 수 있다! 하지만... 이 문제는 도저히 못풀겠는데..? 문제가 진행되면 될수록 앞선 문제보다 " +
+          "2배 3배 더 많은 신경을 쓰게 한다. 얼른 이 문제를 푼 수에 대구로 돌아가 나늦 보균자가 아니라는 것, 배신자도 아니며 물리학과의 해명을 진행해야 한다... " +
+          "그래도 다행인 것은 문제들에 트릭은 없다는 것이다.. 낯선 배경지식이 필요한 문제도 아니라는 것이다... 마지막 문제는 격리소 요리시간에 숨겨놨으니 잘 찾아내줘. " +
+          "그리고 나를 구하러 올 때 해독제를 들고 와줘. 간수가 해독제를 전달해줄 거래. 하지만 조심해. 배후와 간수는 아는 사이야. 둘이 같이 있으면 틀린 약을 줄 수도 있어. 행운을 빌게.";
       } else {
         resultText.innerText = "정답이 아닙니다. 다시 시도해보세요.";
       }
